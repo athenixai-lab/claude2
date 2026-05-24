@@ -15,3 +15,4 @@ Round 13: Realized_Range_Bracket_Foresight - KILLED: mistakes identity for mecha
 Round 14: Triple_Witching_Friday_VolCrush_Fade - QUALIFIED
 Round 15: EURIBOR_1100CET_FixSpillover - QUALIFIED
 Round 16: AntiMartingale_Pyramid_Sequence - KILLED: staking systems have zero EV on fair games (theorem)
+Round 17: MidMonth_BoJ_JGB_Coupon_EURJPY_Spillover - QUALIFIED
