@@ -29,6 +29,7 @@ from data_loader import load_eurusd_m1  # noqa: E402
 from harness import simulate, report, apply_cost  # noqa: E402
 
 import strategy_r01_ldn_4pm_fix as r01  # noqa: E402
+import strategy_r02_tokyo_gotobi as r02  # noqa: E402
 import strategy_r05_options_pin as r05  # noqa: E402
 import strategy_r07_monthend_rebalance as r07  # noqa: E402
 import strategy_r09_donchian as r09  # noqa: E402
@@ -126,6 +127,7 @@ def main():
 
     builders = [
         ("R1 LDN-4PM-Fix", lambda d: simulate(d, r01.build_intents(d))),
+        ("R2 TKY-GOTOBI",  lambda d: simulate(d, r02.build_intents(d))),
         ("R5 OPT-CUT-PIN", lambda d: simulate(d, r05.build_intents(d))),
         ("R7 MONTHEND",    lambda d: simulate(d, r07.build_intents(d))),
         ("R9 DONCHIAN60",  lambda d: r09.run_donchian(d)),
