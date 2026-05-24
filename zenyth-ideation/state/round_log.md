@@ -23,3 +23,4 @@ Round 21: NY_Lunch_LiquidityDrift_Reversion - KILLED: thin liquidity is not a di
 Round 22: NFP_PreRelease_5min_Vacuum_Fade - QUALIFIED
 Round 23: Round_100pip_Magnet_Generic - KILLED: framework-rejected category
 Round 24: London_AsianRange_StopCluster_Reversion - QUALIFIED
+Round 25: NewYear_FirstSession_Drift - KILLED: N=14 sample too small for validation
