@@ -21,3 +21,4 @@ Round 19: QuarterEnd_CentralBank_Reserve_EUR_Rebalance - QUALIFIED
 Round 20: GarmanKlass_Range_Forecast_Bracket - KILLED: vol estimation is not directional edge
 Round 21: NY_Lunch_LiquidityDrift_Reversion - KILLED: thin liquidity is not a direction
 Round 22: NFP_PreRelease_5min_Vacuum_Fade - QUALIFIED
+Round 23: Round_100pip_Magnet_Generic - KILLED: framework-rejected category
