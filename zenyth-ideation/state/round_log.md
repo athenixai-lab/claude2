@@ -5,3 +5,4 @@ Round 3: TOKYO_LUNCH_BREAKOUT - KILLED: fails RNG critic, volatility-clustering 
 Round 4: NY_CUT_PIN_DECAY - QUALIFIED
 Round 5: FRIDAY_ROLLOVER_SQUARING - QUALIFIED
 Round 6: ECB_FIX_DRIFT - QUALIFIED
+Round 7: NFP_INITIAL_SPIKE_FADE - KILLED: variance dominates, arbitraged
