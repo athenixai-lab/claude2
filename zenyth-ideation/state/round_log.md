@@ -8,3 +8,4 @@ Round 6: ECB_FIX_DRIFT - QUALIFIED
 Round 7: NFP_INITIAL_SPIKE_FADE - KILLED: variance dominates, arbitraged
 Round 8: FOMC_PRE_DRIFT - QUALIFIED
 Round 9: IMM_SETTLE_WED - QUALIFIED
+Round 10: SUNDAY_GAP_FILL - QUALIFIED (revised after RNG check)
