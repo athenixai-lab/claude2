@@ -9,3 +9,4 @@ Round 7: MonthEnd_WMR_Rebalance_PreDrift - QUALIFIED
 Round 8: META RNG_Impossibility_Note - framework note (not a candidate)
 Round 9: HeavyTail_Donchian60_Trend_ATRTrail - QUALIFIED (Class B)
 Round 10: Pure_Spread_Capture_LimitGrid - KILLED: real mechanism, untestable on M1 OHLC
+Round 11: Weekend_Gap_Sunday_Open_Fill - QUALIFIED
