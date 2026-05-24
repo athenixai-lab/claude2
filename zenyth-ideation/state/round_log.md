@@ -28,3 +28,4 @@ Round 26: ATR_Compression_Expansion_DirectionalBreak - QUALIFIED (Class B family
 Round 27: FOMC_PostStatement_Drift_2pm_to_230pm - QUALIFIED
 Round 28: M1_BarSkew_Asymmetry_Directional - KILLED: wrong direction at 1-bar (bounce dominates)
 Round 29: Compound_LDN4PMFix_AND_MonthEnd - QUALIFIED (R1 family booster)
+Round 30: PORTFOLIO_Diversified_Ensemble - QUALIFIED (META, final round at max_rounds)
