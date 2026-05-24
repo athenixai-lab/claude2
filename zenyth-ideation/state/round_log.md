@@ -16,3 +16,4 @@ Round 14: ASIAN_RANGE_ALGO - KILLED: false breakout pattern survives RNG
 Round 15: ECB_PRESS_CONF_DRIFT - QUALIFIED
 Round 16: TOM_USD_FUNDING - QUALIFIED
 Round 17: TREASURY_COUPON_SETTLE - QUALIFIED
+Round 18: ROUND_NUMBER_STOP_RUN - KILLED: explicit user reject category
