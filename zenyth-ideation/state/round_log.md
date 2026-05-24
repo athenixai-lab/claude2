@@ -11,3 +11,4 @@ Round 9: HeavyTail_Donchian60_Trend_ATRTrail - QUALIFIED (Class B)
 Round 10: Pure_Spread_Capture_LimitGrid - KILLED: real mechanism, untestable on M1 OHLC
 Round 11: Weekend_Gap_Sunday_Open_Fill - QUALIFIED
 Round 12: Vol_Cluster_Expansion_Direction_Momentum - QUALIFIED (Class B)
+Round 13: Realized_Range_Bracket_Foresight - KILLED: mistakes identity for mechanism; -0.035σ EV per leg
