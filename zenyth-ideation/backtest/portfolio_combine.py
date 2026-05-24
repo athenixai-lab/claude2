@@ -29,9 +29,13 @@ from data_loader import load_eurusd_m1  # noqa: E402
 from harness import simulate, report, apply_cost  # noqa: E402
 
 import strategy_r01_ldn_4pm_fix as r01  # noqa: E402
+import strategy_r05_options_pin as r05  # noqa: E402
+import strategy_r07_monthend_rebalance as r07  # noqa: E402
 import strategy_r09_donchian as r09  # noqa: E402
+import strategy_r11_weekend_gap as r11  # noqa: E402
 import strategy_r12_vol_cluster as r12  # noqa: E402
 import strategy_r18_microbounce as r18  # noqa: E402
+import strategy_r24_london_sweep as r24  # noqa: E402
 
 
 def _compute_per_strategy_pnl_series(trades: pd.DataFrame, dates: pd.DatetimeIndex) -> pd.Series:
@@ -120,28 +124,25 @@ def main():
     df = load_eurusd_m1(path)
     print(f"  Rows: {len(df):,}")
 
-    print("\nRunning R1...")
-    r1_trades = apply_cost(simulate(df, r01.build_intents(df)), spread_pips=spread)
-    print(f"  R1: {len(r1_trades)} trades")
+    builders = [
+        ("R1 LDN-4PM-Fix", lambda d: simulate(d, r01.build_intents(d))),
+        ("R5 OPT-CUT-PIN", lambda d: simulate(d, r05.build_intents(d))),
+        ("R7 MONTHEND",    lambda d: simulate(d, r07.build_intents(d))),
+        ("R9 DONCHIAN60",  lambda d: r09.run_donchian(d)),
+        ("R11 WEND-GAP",   lambda d: simulate(d, r11.build_intents(d))),
+        ("R12 VOL-CLUST",  lambda d: simulate(d, r12.build_intents(d))),
+        ("R18 MICRO-BNCE", lambda d: simulate(d, r18.build_intents(d))),
+        ("R24 LDN-SWEEP",  lambda d: simulate(d, r24.build_intents(d))),
+    ]
 
-    print("Running R9...")
-    r9_trades = apply_cost(r09.run_donchian(df), spread_pips=spread)
-    print(f"  R9: {len(r9_trades)} trades")
+    trades_by_name: dict[str, pd.DataFrame] = {}
+    for name, builder in builders:
+        print(f"Running {name}...")
+        trades = apply_cost(builder(df), spread_pips=spread)
+        trades_by_name[name] = trades
+        print(f"  {name}: {len(trades)} trades")
 
-    print("Running R12...")
-    r12_trades = apply_cost(simulate(df, r12.build_intents(df)), spread_pips=spread)
-    print(f"  R12: {len(r12_trades)} trades")
-
-    print("Running R18...")
-    r18_trades = apply_cost(simulate(df, r18.build_intents(df)), spread_pips=spread)
-    print(f"  R18: {len(r18_trades)} trades")
-
-    result = combine({
-        "R1": r1_trades,
-        "R9": r9_trades,
-        "R12": r12_trades,
-        "R18": r18_trades,
-    })
+    result = combine(trades_by_name)
 
     print("\n--- Per-strategy stats ---")
     for name, stats in result["per_strategy_stats"].items():
