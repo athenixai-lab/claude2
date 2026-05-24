@@ -17,3 +17,4 @@ Round 15: EURIBOR_1100CET_FixSpillover - QUALIFIED
 Round 16: AntiMartingale_Pyramid_Sequence - KILLED: staking systems have zero EV on fair games (theorem)
 Round 17: MidMonth_BoJ_JGB_Coupon_EURJPY_Spillover - QUALIFIED
 Round 18: Microstructure_OneBar_OverReaction_Fade - QUALIFIED (Class B)
+Round 19: QuarterEnd_CentralBank_Reserve_EUR_Rebalance - QUALIFIED
