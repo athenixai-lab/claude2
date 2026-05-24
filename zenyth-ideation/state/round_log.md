@@ -7,3 +7,4 @@ Round 5: Options_1000NY_Cut_Pin_Magnet - QUALIFIED
 Round 6: PreECB_SpreadVacuum_Drift - KILLED: vacuum amplifies not directs; sample too small
 Round 7: MonthEnd_WMR_Rebalance_PreDrift - QUALIFIED
 Round 8: META RNG_Impossibility_Note - framework note (not a candidate)
+Round 9: HeavyTail_Donchian60_Trend_ATRTrail - QUALIFIED (Class B)
